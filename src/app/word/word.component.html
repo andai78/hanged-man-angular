@@ -1,0 +1,8 @@
+<div class="ctn_word">
+  <span *ngFor="let hidden of hiddenWord" class="hiddenWord">
+    <span *ngIf="testWord(hidden) || isLose; else test">{{hidden}}</span>
+    <ng-template #test>_</ng-template>
+  </span>
+</div>
+<p *ngIf="isWin">Bravo !!!!</p>
+<p *ngIf="isLose">Perdu! retentez votre chance</p>
